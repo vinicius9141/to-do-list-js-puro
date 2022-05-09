@@ -1,6 +1,5 @@
-function teste(){
-    alert('teste')
-}
+let taskAdd = []
+var token = getFromLocalStorage("task");
 
 async function showAlert(){
    let content = await Swal.fire({
@@ -14,16 +13,14 @@ async function showAlert(){
         showLoaderOnConfirm: true,
 })
 let buttonConfirm = content.isConfirmed
-let taskAdd = content.value
-localStorage.setItem("task", taskAdd)
+ taskAdd.push(content.value)
+localStorage.setItem("task ", taskAdd)
 
-refreshTask(buttonConfirm)
+// refreshTask(buttonConfirm)
 }
 
 function refreshTask(buttonConfirm){
-    if (buttonConfirm == true){
-      let task = localStorage.getItem('task')
-    document.getElementById('taskToDo').innerText = task
-   
-    }
+// let taskLocalStorage = getFromLocalStorage("task");
+
+console.log(token)
 }

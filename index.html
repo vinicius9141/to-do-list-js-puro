@@ -19,19 +19,25 @@
 <body>
     <div id="addTask">
         <button onclick="showAlert()">Adicionar Task</button>
+        <button onclick="refreshTask()">Carregar tasks</button>
     </div>
 
     <div id="main">
+        
         <div id="todo" class="card">
             <h2 class="title">To Do </h2>
-            <span id="taskToDo">Tarefa 1</span>
+           <ul id="taskToDo" class="listTask">
+               <li></li>
+               <li></li>
+               <li></li>
+           </ul>
         </div>
 
         <div id="doing"  class="card">
             <h2 class="title">To Doing </h2>
             <span>Tarefa 1 doing</span>
         </div>
-        
+
         <div id="done"  class="card">
             <h2 class="title">To Done </h2>
             <span>Tarefa 1 done</span>
